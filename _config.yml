@@ -25,11 +25,13 @@ author:
   avatar           : "IMG_0022.JPG"
   name             : "Aaryan Dhawan"
   pronouns         : # example: "she/her"  
-  bio              : "Master of Engineering, Computer Engineering student at Virginia Tech. Specializes in RTL des"
-  location         : "Earth"
+  bio              : "Master of Engineering, Computer Engineering student at Virginia Tech. Specializes in areas such as Computer Architecture, 
+                      RTL design, Digital IC design and manufacturing, and is currently doing research in neuromorphic computing hardware design 
+                      with the Brain Inspired Computing, Communications, and Security (BRICCS) Lab at Virginia Tech. "
+  location         : "Fairfax, VA, USA"
   employer         : "Virginia Tech"
   uri              : # URL
-  email            : "aaryanvd@vt.edu" 
+  email            : "aaryanvaldhawan@gmail.com" 
 
   # Academic websites
   academia         : # URL
