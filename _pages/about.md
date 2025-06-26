@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Personal Work and Project Showcare"
+title: "Personal Work and Project Showcase"
 author_profile: true
 redirect_from: 
   - /about/
