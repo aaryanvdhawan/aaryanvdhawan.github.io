@@ -17,6 +17,7 @@ My name is Aaryan Dhawan and I'm a Computer Enigneer, specializing in RTL design
 Portfolio
 =========
 
+Coming soon!
 The Portfolio section will contain selected projects completed during my academic career at VT. These projects are the ones that I found the most memorable, challenging, or a mix of both. These will range from RTL design projects, VLSI layout designs, and some semiconductor based work. 
 
 Blog
