@@ -7,29 +7,10 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
-[Download Detailed Resume Here](files/AVDResume.pdf)
 
-Education
-======
-* M.Eng, Computer Engineering, Virginia Tech, 2026 (expected)
-* B.S, Computer Engineering, Chip-Scale Integration, Virginia Tech, 2024
+<a href="{{ '/files/AVDResume.pdf' | relative_url }}" target="_blank">Download CV (PDF)</a>
 
-Work experience
-======
-* Research Group Member, BRICCS Group, Virginia Tech, March 2025 - Present
-  * Researching novel Spiking Neural Network designs and their implementations on FPGAs
-  
-Skills
-======
-* RTL Design
-* FPGA Development
-  * Verilog
-  * SystemVerilog
-* Embedded C
-* C++ 
-* Python
-* VLSI Design
-  * Cadence Virtuoso
-  * DRC, LVS, and PEX
-* Machine Learning
+<iframe src="{{ '/files/AVDResume.pdf' | relative_url }}" width="100%" height="800px">
+    This browser does not support PDFs. Please download the PDF to view it: 
+    <a href="{{ '/files/AVDResume.pdf' | relative_url }}">Download CV</a>.
+</iframe>
