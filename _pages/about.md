@@ -12,7 +12,7 @@ This webpage serves as my personal showcase of my work done while with the BRICC
 Background
 =========
 
-My name is Aaryan Dhawan and I'm a Computer Enigneer, specializing in RTL design and computer architecture. I'm based in the Northern Virginia area and attended Virginia Tech for my Bachelors of Science, Computering Engineering, majoring in chip-scale integration (BSCPE-CPI). Still at VT, I'm now pursuing a Master of Engineering in CPE on the VLSI and Design Automation track. I am a member of the Brain Inspired Computing, Communications, and Security (BRICCS) Group, based at the Virginia Tech Institute for Advanced Computing in Northern Virginia, where I've been researching novel Spiking Neural Network designs and there implementations on FPGAs. 
+My name is Aaryan Dhawan and I'm a Computer Engineer, specializing in RTL design and computer architecture. I'm based in the Northern Virginia area and attended Virginia Tech for my Bachelors of Science, Computering Engineering, majoring in chip-scale integration (BSCPE-CPI). Still at VT, I'm now pursuing a Master of Engineering in CPE on the VLSI and Design Automation track. I am a member of the Brain Inspired Computing, Communications, and Security (BRICCS) Group, based at the Virginia Tech Institute for Advanced Computing in Northern Virginia, where I've been researching novel Spiking Neural Network designs and their implementations on FPGAs.
 
 Portfolio [Coming Soon]
 =========
