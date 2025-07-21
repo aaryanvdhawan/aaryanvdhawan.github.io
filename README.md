@@ -1,9 +1,9 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Aaryan's Personal Website
+**Can be found [here](https://actualgem.github.io)**
 
-![Academic Pages template example](images/homepage.png "Academic Pages template example")
+This website is based on the [Academic Pages template](https://github.com/academicpages/academicpages.github.io). It is designed to be a simple, easy-to-use template for academics and professionals to showcase their work, publications, and projects. The template is built using Jekyll, a static site generator, and is hosted on GitHub Pages.
 
-# Getting Started
+<!-- # Getting Started
 
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
 1. Click the "Use this template" button in the top right.
@@ -13,8 +13,7 @@
 1. Check status by going to the repository settings, in the "GitHub pages" section
 1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
 
-See more info at https://academicpages.github.io/
-
+See more info at https://academicpages.github.io/  
 ## Running locally
 
 When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
@@ -93,4 +92,4 @@ Unfortunately, one logistical issue with a template theme like Academic Pages th
 
 [![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
 [![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+</div> -->
