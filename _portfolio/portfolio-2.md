@@ -1,5 +1,4 @@
 ---
----
 title: "Izhekich Neuron based Spiking Neural Network Template"
 excerpt: "Developing a spiking neural network using Izhekich neurons<br/><img src='/images/network.png'>"
 collection: portfolio
@@ -15,33 +14,48 @@ This project aimed to develop the SNN described in [1] and use the FPGA implemen
 
 ## Izhekich Neuron Model 
 The Izhekich neuron model is described by the following equations:
-\[ \frac{dv}{dt} = 0.04v^2 + 5v + 140 - u + I \]
-\[ \frac{du}{dt} = a(bv - u) \]
-\[ \text{if } v \geq 30 \text{ mV, then } \begin{cases} v \leftarrow c \\ u \leftarrow u + d \end{cases} \]
+```math
+\frac{dv}{dt} = 0.04v^2 + 5v + 140 - u + I
+```
+```math
+\frac{du}{dt} = a(bv - u)
+```
+If \( v \geq 30 \) mV, then:
+- Set \( v \leftarrow c \)
+- Set \( u \leftarrow u + d \)
 Where:
-- \( v \): Membrane potential of the neuron
-- \( u \): Membrane recovery variable
-- \( I \): Input current
-- \( a, b, c, d \): Parameters defining the neuron's behavior
+- **\( v \)**: Membrane potential of the neuron
+- **\( u \)**: Membrane recovery variable
+- **\( I \)**: Input current
+- **\( a, b, c, d \)**: Parameters defining the neuron's behavior
 
 This model captures the essential dynamics of neuronal spiking but can be approximated and transformed into a discrete time equation for FPGA implementation as show in [2], using the following equations:
-\[ v[n + 1] &= \frac{1}{2^8} v^2[n] + 2^2v[n] + 1400 - u[n] + I[n]\] 
-\[ u[n + 1] &= u[n] + a^* (b^* v[n] - u[n])  \]
+```math
+\begin{align*}
+v[n + 1] &= \frac{1}{2^8} v^2[n] + 2^2 v[n] + 1400 - u[n] + I[n] \\
+u[n + 1] &= u[n] + a^* (b^* v[n] - u[n])
+\end{align*}
+```
 If \( v[n + 1] > 300 \) mV, then:
 - Set \( v[n + 1] \) to \( c^* \)
 - Set \( u[n + 1] \) to \( u[n + 1] + d^* \)
+
 In this case, the parameters have been scaled to the following values:
-- **a\*** = 1/64
-- **b\*** = 1/4
-- **c\*** = -650
-- **d\*** = 80
+- **\( a^* \)** = 1/64
+- **\( b^* \)** = 1/4
+- **\( c^* \)** = -650
+- **\( d^* \)** = 80
 
 These equations are implemented into the architecture shown below:
 ![Neuron Architecture](/images/neuron_architecture.png)
 
 ## Synaptic Current
-The synaptic current \( I \) is calculated based on the input spikes and synaptic weights:
-\[ I = \sum_{i} w_i \cdot s_i \]
+The synaptic current is calculated as follows:
+
+```math
+I = \sum_{i} w_i \cdot s_i
+```
+
 Where:
 - \( w_i \): Synaptic weight for input \( i \)
 - \( s_i \): Spike from input neuron \( i \) (1 if spike, 0 otherwise)
@@ -63,12 +77,14 @@ Using Xilinx Vivado, the SNN targeted the Alveo U50 Data Center Accelerator Card
 | DSPs                | 623               | 624            | 5,952     | 
 
 Power and Frequency for both designs are as follows:    
+
 | Design              | Power (W) | Frequency (MHz) |
 |---------------------|-----------|-----------------|
 | Low-Latency Adder   | 6.087     | 200             |
 | Low-Area Adder      | 5.198     | 235             |
 
 Compared to [1], the inference latency can be found in the following table:
+
 | Design              | Inference Latency |
 |---------------------|-------------------| 
 | Custom RTL [1]      | 32 microseconds   |
