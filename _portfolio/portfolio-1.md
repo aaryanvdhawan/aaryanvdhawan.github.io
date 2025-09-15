@@ -21,7 +21,7 @@ Each sprite is held in its own ROM, where the address is defined by the hcount a
 
 ## Gameplay
 Once the RTL is synthesized and loaded onto the FPGA, the user can interact with the game using the buttons and switches on the DE1-SoC board. First, the user must use KEY [0] to reset the game, which will shuffle the opponent's Pokémon and display the starting screen. Using KEY[1] will advance the game and display your opponent's Pokémon. When the Pokéball appears on the user's side, the user can select their Pokémon using SW [1:0]. The game will then check if the user won or lost the matchup and display the corresponding indicator. The example below shows the user winning the matchup.
-[Example Gameplay Screenshots](/images/ProjectVGA_Charizard.png)
+![Example Gameplay Screenshots](/images/ProjectVGA_Charizard.png)
 
 ## FPGA Resource Utilization
 The project was implemented on an Altera DE1-SoC board, which features an Intel Cyclone V FPGA. The resource utilization for the project is as follows:
