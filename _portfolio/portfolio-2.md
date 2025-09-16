@@ -16,7 +16,11 @@ This project aimed to develop the SNN described in [1] and use the FPGA implemen
 The Izhekich neuron model is described by the following equations:
 $$
 \frac{dV}{dt} = 0.04V^2 + 5V + 140 - u + I
+$$
+$$
 \frac{du}{dt} = a(bV - u)
+$$
+$$
 \text{if } V \geq 30 \text{ mV, then }
 \begin{cases}
 V &\leftarrow c \\
@@ -33,6 +37,8 @@ Where:
 This model captures the essential dynamics of neuronal spiking but can be approximated and transformed into a discrete time equation for FPGA implementation as show in [2], using the following equations:
 $$
 v[n + 1] = \frac{1}{2^8} v^2[n] + 2^2 v[n] + 1400 - u[n] + I[n]
+$$
+$$
 u[n + 1] = u[n] + a^* (b^* v[n] - u[n])
 $$
 
@@ -44,6 +50,7 @@ v[n + 1] &\leftarrow c^* \\
 u[n + 1] &\leftarrow u[n + 1] + d^* 
 \end{cases}
 $$
+
 In this case, the parameters have been scaled to the following values:
 - **\( a^* \)** = 1/(2^6)
 - **\( b^* \)** = 1/(2^2)
